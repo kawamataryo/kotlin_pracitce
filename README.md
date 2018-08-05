@@ -1,0 +1,3 @@
+# kotlinの練習用リポジトリ
+
+kotlinスタートブックを参考にspringbootのtodoアプリを作成
