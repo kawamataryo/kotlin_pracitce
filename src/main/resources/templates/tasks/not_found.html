@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-  <meta charset="UTF-8">
-  <title>not_found</title>
-</head>
-<body>
-<p>指定されたタスクは存在しません。</p>
-<a th:href="@{/tasks}">トップへ戻る</a>
-</body>
-</html>
+<div layout:decorator="layout">
+  <th:block layout:fragment="layout-content">
+    <p>指定されたタスクは存在しません。</p>
+    <a th:href="@{/tasks}">トップへ戻る</a>
+  </th:block>
+</div>

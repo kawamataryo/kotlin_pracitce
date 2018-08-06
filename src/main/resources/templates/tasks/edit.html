@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
-  <meta charset="UTF-8">
-  <title>edit</title>
-</head>
-<body>
-<form th:action="@{./}" th:method="patch" th:object="${taskUpdateForm}">
-  <div>
-    <label>
-      内容: <input type="text" th:field="*{content}">
-    </label>
-    <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}">エラーメッセージ</p>
-  </div>
-  <div>
-    <label>
-      完了: <input type="checkbox" th:field="*{done}">
-    </label>
-  </div>
-  <div class="">
-    <input type="submit" value="送信">
-  </div>
-</form>
+<div layout:decorator="layout">
+  <th:block layout:fragment="layout-content">
+    <form th:action="@{./}" th:method="patch" th:object="${taskUpdateForm}">
+      <div>
+        <label>
+          内容: <input type="text" th:field="*{content}">
+        </label>
+        <p th:if="${#fields.hasErrors('content')}" th:errors="*{content}">エラーメッセージ</p>
+      </div>
+      <div>
+        <label>
+          完了: <input type="checkbox" th:field="*{done}">
+        </label>
+      </div>
+      <div class="">
+        <input type="submit" value="送信">
+      </div>
+    </form>
+  </th:block>
+</div>
 
-</body>
-</html>
